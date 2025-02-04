@@ -14,7 +14,7 @@ Automata::Automata(int (*getstate)(int, int))
 	this->get_state = getstate;
 }
 
-Automata::Automata(void* data)
+Automata::Automata(void *data)
 {
 	innit();
 	this->data = data;
@@ -28,14 +28,9 @@ Automata::Automata()
 Automata::~Automata()
 {
 	std::cout << "Automata destructor start" << std::endl;
-	if (this->alphabet != NULL)
-		delete[] this->alphabet;
-	if (this->errors != NULL)
-		delete[] this->errors;
-	std::cout << "Automata destroyed" << std::endl;
 }
 
-int Automata::alphabet_idx(std::string* alphabet, char c)
+int Automata::alphabet_idx(std::string *alphabet, char c)
 {
 	int i = -1;
 
@@ -55,10 +50,6 @@ int Automata::evaluate()
 	while (++c_idx < (int)str.length())
 	{
 		this->state = this->get_state(this->state, alphabet_idx(this->alphabet, this->str[this->c_idx]));
-		/* 		if (fsa[state] != NULL)
-					fsa[state](*this, this->data);
-				if (fta[ostate][state] != NULL)
-					fta[ostate][state](*this, this->data); */
 		this->ostate = this->state;
 	}
 	return (this->state);

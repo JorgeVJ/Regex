@@ -137,10 +137,10 @@
     <ClCompile Include="RegexParser.cpp" />
     <ClCompile Include="RegexParser.hpp" />
     <ClCompile Include="RegexState.cpp" />
-    <ClCompile Include="RegexStates.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automata.hpp" />
+    <ClInclude Include="RegexState.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

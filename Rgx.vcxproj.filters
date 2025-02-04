@@ -36,9 +36,6 @@
     <ClCompile Include="RegexParser.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="RegexStates.hpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="AndRState.cpp">
       <Filter>Archivos de recursos\States\BranchStates</Filter>
     </ClCompile>
@@ -60,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Automata.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="RegexState.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
